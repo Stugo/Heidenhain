@@ -1,0 +1,115 @@
+From p380 i TNC 640 | Conversational Programming User's Manual | NC Software 34059x-08 
+
+FN 0: Q5 SET UNDEFINED
+Sets Q5 as undefined
+
+FN 0: ASSIGN
+e. g., FN 0: Q5 = +60
+
+FN 1: ADDITION
+e. g., FN 1: Q1 = -Q2 + -5
+
+FN 2: SUBTRACTION
+e. g. FN 2: Q1 = +10 - +5
+
+FN 3: MULTIPLICATION
+e. g. FN 3: Q2 = +3 * +3
+
+FN 4: DIVISION 
+e.g., FN 4: Q4 = +8 DIV +Q2
+
+FN 5: SQUARE ROOT 
+e.g., FN 5: Q20 = SQRT 4
+
+FN 6: SINUS
+e. g., FN 6: Q20 = SIN-Q5
+
+FN 7: COSINE
+e. g., FN 7: Q21 = COS-Q5
+
+FN 8: ROOT SUM OF SQUARES
+e. g., FN 8: Q10 = +5 LEN +4
+
+FN 9: IF EQUAL, JUMP
+e. g. FN 9: IF +Q1 EQU +Q3 GOTO LBL
+"UPCAN25"
+
+FN 9: IF UNDEFINED, JUMP
+e. g., FN 9: IF +Q1 IS UNDEFINED GOTO LBL
+“UPCAN25“
+
+FN 9: IF DEFINED, JUMP
+e. g., FN 9: IF +Q1 IS DEFINED GOTO LBL
+“UPCAN25“
+
+FN 10: IF UNEQUAL, JUMP
+e. g.FN 10: IF +10 NE –Q5 GOTO LBL 10
+
+FN 11: IF GREATER, JUMP
+e. g.FN 11: IF+Q1 GT+10 GOTO LBL QS5
+
+FN 12: IF LESS, JUMP
+e. g. FN 12: IF+Q5 LT+0 GOTO LBL "ANYNAME"
+
+FN 13: ANGLE
+e. g., FN 13: Q20 = +25 ANG-Q1
+
+FN 14: ERROR
+Display error messages
+
+FN 16: F-PRINT
+Formatted output of texts or Q
+parameter values
+
+FN 18: SYSREAD
+Read system data
+
+FN 19: PLC
+Transfer values to the PLC
+
+FN 20: WAIT FOR
+NC and PLC synchronization
+
+FN 23: Determining the CIRCLE DATA from three points
+e. g., FN 23: Q20 = CDATA Q30
+
+FN 24: Determining the CIRCLE DATA from four points
+e. g., FN 24: Q20 = CDATA Q30
+
+FN 26: TABOPEN
+Open a freely definable table
+
+FN 27: TABWRITE
+Write to a freely definable table
+
+FN 28: TABREAD
+Read from a freely definable table
+
+FN 29: PLC
+Transfer up to eight values to the
+PLC
+
+FN 37: EXPORTExport local Q
+parameters or QS parameters into
+a calling program
+
+FN 38: SEND
+Send information from the NC
+program
+
+
+
+Unconditional jumps
+An unconditional jump is programmed by entering a conditional
+jump whose condition is always true. Example:
+FN 9: IF+10 EQU+10 GOTO LBL1
+
+Abbreviations used:
+IF : If
+EQU : Equal to
+NE : Not equal to
+GT : Greater than
+LT : Less than
+GOTO : Go to
+UNDEFINED : Undefined
+DEFINED : Defined
