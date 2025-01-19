@@ -1,4 +1,4 @@
-From p380 i TNC 640 | Conversational Programming User's Manual | NC Software 34059x-08 
+From p380 in TNC 640 | Conversational Programming User's Manual | NC Software 34059x-08 
 
 FN 0: Q5 SET UNDEFINED
 Sets Q5 as undefined
