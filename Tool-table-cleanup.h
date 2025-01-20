@@ -5,6 +5,7 @@ BEGIN PGM TOOL-TABLE-CLEANUP MM
 ; Controll Heidenhain TNC640
 ;
 ; Take out the tool from the magazine
+; Empty the Name field
 ; Set the tool range to empty and run this script 
 ;
 FN 0 : Q1 = +10 ; Set first tool to be reset
@@ -13,7 +14,6 @@ FN 0: Q8 = Q1
 
 LBL 1 ; Start over
 
-FN 17: SYSWRITE ID50 NR0 IDXQ8 = "" ; NAME, untested!
 FN 17: SYSWRITE ID50 NR1 IDXQ8 = +0 ; L
 FN 17: SYSWRITE ID50 NR2 IDXQ8 = +0 ; R
 FN 17: SYSWRITE ID50 NR3 IDXQ8 = +0 ; R2
